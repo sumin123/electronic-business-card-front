@@ -1,11 +1,13 @@
 
 const KakaoLoginBtn = () => {
-  window.Kakao.init(process.env.REACT_APP_KAKAO_JS_KEY);
-  console.log(window.Kakao.isInitialized());
+  if (!window.Kakao.isInitialized()) {
+    window.Kakao.init(process.env.REACT_APP_KAKAO_JS_KEY);
+  }
 
   function loginWithKakao() {
     window.Kakao.Auth.authorize({
-      redirectUri: 'http://localhost:3000',
+      redirectUri: process.env.REACT_APP_KAKAO_REDIRECT_URL,
+      scope: 'profile_nickname,account_email'
     });
   }
 
@@ -17,8 +19,7 @@ const KakaoLoginBtn = () => {
       window.Kakao.Auth.getStatusInfo()
         .then(function(res) {
           if (res.status === 'connected') {
-            document.getElementById('token-result').innerText
-              = 'login success, token: ' + window.Kakao.Auth.getAccessToken();
+            console.log(window.Kakao.Auth.getAccessToken());
           }
         })
         .catch(function(err) {

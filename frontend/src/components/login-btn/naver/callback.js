@@ -1,13 +1,14 @@
 import { useEffect } from 'react';
 import { Navigate } from 'react-router-dom';
 
-function CallbackGoogle() {
-  const userInfoUrl = 'https://www.googleapis.com/oauth2/v2/userinfo'
-  
+
+function CallbackNaver() {
+  const userInfoUrl = '/v1/nid/me'
+
   useEffect(() => {
     async function getInfo() {
       const params = new URLSearchParams(window.location.href.split('#')[1])
-      const token = params.get("access_token")
+      const token = params.get('access_token')
 
       const res = await fetch(userInfoUrl, {
         method: 'GET',
@@ -16,11 +17,11 @@ function CallbackGoogle() {
         }
       })
 
-      var data = await res.json();
+      var data = await res.json()
       console.log(data)
     }
 
-    getInfo()
+    getInfo();
   }, [])
 
   // return (
@@ -29,4 +30,4 @@ function CallbackGoogle() {
   window.location.replace("http://localhost:3000/profile-link-generate")
 }
 
-export default CallbackGoogle;
+export default CallbackNaver;

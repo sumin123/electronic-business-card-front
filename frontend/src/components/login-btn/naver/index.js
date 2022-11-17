@@ -5,8 +5,8 @@ const NaverLoginBtn = () => {
   
   const naverLogin = new naver.LoginWithNaverId(
     {
-      clientId: process.env.REACT_APP_CLIENT_ID_NAVER,
-      callbackUrl: process.env.REACT_APP_REDIRECT_URL_NAVER,
+      clientId: process.env.REACT_APP_NAVER_CLIENT_ID,
+      callbackUrl: process.env.REACT_APP_NAVER_REDIRECT_URL,
       isPopup: false, /* 팝업을 통한 연동처리 여부, true 면 팝업 */
       loginButton: { color: "green", type: 1, height: 47 } /* 로그인 버튼의 타입을 지정 */
     }
