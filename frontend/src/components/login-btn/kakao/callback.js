@@ -33,13 +33,13 @@ function CallbackKakao() {
         },
       })
 
-      console.log(data)
+      // console.log(data)
 
       fetch(`${process.env.REACT_APP_SERVER_IP}/back/login`, {
         method: 'POST',
         body: JSON.stringify({
           'userId': data.id,
-          'email': data.kakao_account.email,
+          'email': data.email,
           'oauth': 'kakao'
         })
       })

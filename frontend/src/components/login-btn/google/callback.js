@@ -18,7 +18,7 @@ function CallbackGoogle() {
       })
 
       var data = await res.json();
-      console.log(data)
+      // console.log(data)
 
       await fetch(`${process.env.REACT_APP_SERVER_IP}/back/login`, {
         method: 'POST',
@@ -30,10 +30,11 @@ function CallbackGoogle() {
           'email': data.email,
           'oauth': 'google'
         }),
-        mode: "cors",
+        credentials: "include"
       });
 
-      navigate("/profile-link-generate")
+      // navigate("/profile-link-generate")
+      window.location.replace("http://localhost:3000/profile-link-generate")
     }
 
     getInfo()

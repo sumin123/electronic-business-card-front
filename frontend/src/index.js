@@ -10,6 +10,7 @@ import CallbackKakao from './components/login-btn/kakao/callback';
 import ProfileGeneragePage from './pages/profile-generate';
 import WelcomePage from './pages/welcome';
 import ProfileLinkGeneratePage from './pages/profile-link-generate';
+import ProfilePage from './pages/profile';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -24,6 +25,7 @@ root.render(
         <Route exact path="/profile-link-generate" element={<ProfileLinkGeneratePage />} />
         <Route exact path="/welcome" element={<WelcomePage />} />
         <Route exact path="/profile-generate" element={<ProfileGeneragePage />} />
+        <Route exact path="/profile/:link" element={<ProfilePage />} />
       </Routes>
     </BrowserRouter>
   // </React.StrictMode>

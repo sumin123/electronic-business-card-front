@@ -16,7 +16,7 @@ function CallbackNaver() {
       })
 
       var data = await res.json()
-      console.log(data)
+      // console.log(data)
 
       fetch(`${process.env.REACT_APP_SERVER_IP}/back/login`, {
         method: 'POST',
