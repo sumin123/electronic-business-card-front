@@ -1,6 +1,4 @@
 import { useEffect } from 'react';
-import { Navigate } from 'react-router-dom';
-
 
 function CallbackNaver() {
   const userInfoUrl = '/v1/nid/me'
@@ -19,6 +17,15 @@ function CallbackNaver() {
 
       var data = await res.json()
       console.log(data)
+
+      fetch(`${process.env.REACT_APP_SERVER_IP}/back/login`, {
+        method: 'POST',
+        body: JSON.stringify({
+          'userId': data.response.id,
+          'email': data.response.email,
+          'oauth': 'naver'
+        })
+      })
     }
 
     getInfo();
@@ -27,7 +34,7 @@ function CallbackNaver() {
   // return (
   //   <Navigate to="/profile-link-generate" />
   // )
-  window.location.replace("http://localhost:3000/profile-link-generate")
+  // window.location.replace("http://localhost:3000/profile-link-generate")
 }
 
 export default CallbackNaver;

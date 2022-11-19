@@ -21,19 +21,27 @@ function CallbackKakao() {
         method: "POST"
       })
 
-      var data = await res.json();
-      console.log(data)
-      const token = data.access_token
+      var token_data = await res.json();
+      const token = token_data.access_token
 
       window.Kakao.Auth.setAccessToken(`${token}`);
 
-      window.Kakao.API.request({
+      const data = await window.Kakao.API.request({
         url: '/v2/user/me',
         data: {
           property_keys: ['kakao_account.email', 'kakao_account.name'],
         },
-      }).then((res) => {
-        console.log(res)
+      })
+
+      console.log(data)
+
+      fetch(`${process.env.REACT_APP_SERVER_IP}/back/login`, {
+        method: 'POST',
+        body: JSON.stringify({
+          'userId': data.id,
+          'email': data.kakao_account.email,
+          'oauth': 'kakao'
+        })
       })
     }
 
@@ -43,7 +51,7 @@ function CallbackKakao() {
   // return (
   //   <Navigate to="/profile-link-generate" />
   // )
-  window.location.replace("http://localhost:3000/profile-link-generate")
+  // window.location.replace("http://localhost:3000/profile-link-generate")
 }
 
 export default CallbackKakao;
