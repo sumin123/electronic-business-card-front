@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "hevetica";
+  src: url("./fonts/helveticablack/helvetica-black-2.otf");
+}
+
+@font-face {
+  font-family: "ibm-plex";
+  src: url("./fonts/IBM_Plex_Sans/IBMPlexSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "aktiv-grotesk";
+  src: url("./fonts/Aktiv_Grotesk/TTF/AktivGrotesk-Regular.ttf");
+}
+
+@font-face {
+  font-family: "ibm-plex-bold";
+  src: url("./fonts/IBM_Plex_Sans/IBMPlexSans-Bold.ttf");
+}

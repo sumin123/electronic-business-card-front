@@ -1,0 +1,30 @@
+.logo {
+  margin: 10vh 0 2px 0;
+}
+
+.login-title {
+  font-family: 'helvetica';
+  font-size: 48px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.sub-title {
+  font-family: 'aktiv-grotesk';
+  font-size: 14px;
+  color: #B6B6B6;
+}
+
+.description {
+  font-family: 'ibm-plex';
+  color: #B6B6B6;
+}
+
+.login-btn-container {
+  padding: 10vw 15vw;
+}
+
+.login-btn-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}

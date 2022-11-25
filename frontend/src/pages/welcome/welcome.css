@@ -1,0 +1,77 @@
+.welcome-logo {
+  margin: 5vh 0 2px 5vw;
+}
+
+.welcome-msg {
+  font-family: 'ibm-plex-bold';
+  margin: 0 0 10vw 5vw;
+  font-size: 20px;
+}
+
+.to-profile-create {
+  background-color: black;
+  color: white;
+  width: 90vw;
+  margin: 5vw;
+  padding: 9px;
+  border-style: none;
+  border-radius: 7px;
+
+  font-family: 'ibm-plex-bold';
+}
+
+.nexttime-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.to-profile-nexttime {
+  background-color: white;
+  border-style: none;
+  font-family: 'aktiv-grotesk';
+  font-size: 14px;
+  color: #B6B6B6;
+}
+
+/* .back-entering {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  background: black;
+}
+
+.back-entered {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  transform: rotateY(-180deg);
+  transform-style: preserve-3d;
+  transition: all 4000ms;
+  background: black;
+} */
+
+
+.welcome-pageSlider-entering {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 1;
+  transform-style: preserve-3d;
+  transform: rotateY(-180deg);
+  background: white;
+  backface-visibility: hidden;
+}
+
+.welcome-pageSlider-entered {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 1;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+  transition: all 1000ms;
+  background: white;
+  backface-visibility: hidden;
+}

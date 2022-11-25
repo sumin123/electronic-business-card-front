@@ -1,0 +1,52 @@
+.image {
+  display: none;
+}
+
+.profile-input {
+  border-style: none;
+  background-color: lightgray;
+  width: -webkit-fill-available;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 7px;
+}
+
+.profile-img-preview {
+  width: 25vw;
+  height: 25vw;
+  border-radius: 100px;
+  position: absolute;
+  top: 50px;
+}
+
+.background-img-preview {
+  width: 100vw;
+  height: 40vh;
+  background-color: darkgray;
+}
+
+.detail-info-container {
+  border-radius: 15px;
+  position: relative;
+  top: -20px;
+  padding: 20px;
+  background-color: white;
+}
+
+.title-wrapper{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.submit-btn {
+  background-color: black;
+  color: white;
+  width: 90vw;
+  margin: 5vw;
+  padding: 9px;
+  border-style: none;
+  border-radius: 7px;
+
+  font-family: 'ibm-plex-bold';
+}

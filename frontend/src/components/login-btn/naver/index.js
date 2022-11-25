@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import "./naver.css";
 
 const NaverLoginBtn = () => {
   const {naver} = window
@@ -18,7 +19,7 @@ const NaverLoginBtn = () => {
 
   return (
     <div id='naverIdLogin'>
-      <button>Naver 로그인</button>
+      <button className='login-btn'></button>
     </div>
   )
 }

@@ -1,15 +1,25 @@
+import { Transition } from 'react-transition-group';
+import "./profile-link.css";
+
 function ProfileLinkGeneratePage() {
   return (
-    <form className="container" action={`${process.env.REACT_APP_SERVER_IP}/back/profile-link`} method="POST" encType="multipart/form-data">
-      <div>프로필 링크 만들기</div>
-      <div className="input-container">
-        <input className="head" id="head" name="profile-link" type="text" placeholder="링크 주소" />
-      </div>
+    <Transition in={true} timeout={200} appear>
+      {(status) => (
+        <div className={`pageSlider-${status}`}>
+          <img className="back" src='assets/icons/Back.png' />
+          <form className="container" action={`${process.env.REACT_APP_SERVER_IP}/back/profile-link`} method="POST" encType="multipart/form-data">
+            <div className='profile-link-title'>프로필 링크 만들기</div>
+            <div className="input-container">
+              <input className="link-input" id="head" name="profile-link" type="text" placeholder="https://sign-card.com/name01" />
+            </div>
 
-      <button type="submit" className="submit-btn">
-        다음
-      </button>
-    </form>
+            <button className="link-submit-btn" type="submit">
+              다음
+            </button>
+          </form>
+        </div>
+      )}
+    </Transition>
   )
 }
 

@@ -1,3 +1,4 @@
+import "./kakao.css";
 
 const KakaoLoginBtn = () => {
   if (!window.Kakao.isInitialized()) {
@@ -37,7 +38,9 @@ const KakaoLoginBtn = () => {
   
   return (
     <div>
-      <button onClick={loginWithKakao}>Kakao 로그인</button>
+      <button className="login-btn" onClick={loginWithKakao}>
+        <img src="assets/img/kakao_logo.png" />
+      </button>
     </div>
   )
 }

@@ -31,8 +31,10 @@ function oauthSignIn() {
 
 function GoogleLoginBtn() {
   return (
-    <div className="testClass">
-      <button type="submit" onClick={oauthSignIn}>구글로 로그인</button>
+    <div>
+      <button className="login-btn" type="submit" onClick={oauthSignIn}>
+        <img src="assets/img/google_logo.png" />
+      </button>
     </div>
   )
 }
